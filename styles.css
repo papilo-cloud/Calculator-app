@@ -1,0 +1,273 @@
+
+/*### Theme 1*/
+/*#### Backgrounds*/
+:root
+{
+    
+--Very-dark-desaturated-blue1: hsl(222, 26%, 31%);/*(main background)*/
+--Very-dark-desaturated-blue2: hsl(223, 31%, 20%);/*(toggle background, keypad background)*/
+--Very-dark-desaturated-blue3: hsl(224, 36%, 15%);/* (screen background)*/
+}
+
+/*#### Keys*/
+:root
+{
+    
+--Desaturated-dark-blue1: hsl(225, 21%, 49%);/* (key background)*/
+--Desaturated-dark-blue2: hsl(224, 28%, 35%);/* (key shadow)*/
+--Red: hsl(6, 63%, 50%);/* (key background, toggle)*/
+--Dark-red: hsl(6, 70%, 34%);/* (key shadow)*/
+--Light-grayish-orange: hsl(30, 25%, 89%);/* (key background)*/
+--Grayish-orange: hsl(28, 16%, 65%);/* (key shadow)*/
+}
+
+/*#### Text*/
+:root
+{
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0, 100%);
+}
+
+
+/*### Theme 2*/
+/*#### Backgrounds*/
+:root
+{
+    
+--Light-gray: hsl(0, 0%, 90%);/*(main background)*/
+--Grayish-red: hsl(0, 5%, 81%);/*(toggle background, keypad background)*/
+--Very-light-gray: hsl(0, 0%, 93%);/* (screen background)*/
+}
+
+/*#### Keys*/
+:root
+{
+    
+--Dark-moderate-cyan: hsl(185, 42%, 37%);/* (key background)*/
+--Very-dark-cyan: hsl(185, 58%, 25%);/* (key shadow)*/
+--Orange: hsl(25, 98%, 40%);/* (key background, toggle)*/
+--Dark-orange: hsl(25, 99%, 27%);/* (key shadow)*/
+--Light-grayish-yellow: hsl(45, 7%, 89%);/* (key background)*/
+--Dark-grayish-orange: hsl(35, 11%, 61%);/* (key shadow)*/
+}
+
+/*#### Text*/
+:root
+{
+    --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+}
+
+
+/*### Theme 3*/
+/*#### Backgrounds*/
+:root
+{
+    
+--Very-dark-violet:  hsl(268, 75%, 9%);/*(main background)*/
+--Very-dark-violet: hsl(268, 71%, 12%);/*(toggle background, keypad background)*/
+}
+
+/*#### Keys*/
+:root
+{
+    
+--Dark-violet: hsl(281, 89%, 26%);/* (key background)*/
+--Vivid-magenta: hsl(285, 91%, 52%);/* (key shadow)*/
+--Pure-cyan: hsl(176, 100%, 44%);/* (key background, toggle)*/
+--Soft-cyan: hsl(177, 92%, 70%);/* (key shadow)*/
+--Very-dark-violet: hsl(268, 47%, 21%);/* (key background)*/
+--Dark-magenta: hsl(290, 70%, 36%);/* (key shadow)*/
+}
+
+/*#### Text*/
+:root
+{
+    --Light-yellow: hsl(52, 100%, 62%);
+    --Very-dark-blue: hsl(198, 20%, 13%);
+}
+
+
+*
+{
+    box-sizing: border-box;
+}
+.bdy
+{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--Very-dark-desaturated-blue1);
+}
+.container
+{
+    position: relative;
+    width: 100%;
+}
+.change-Bg
+{
+    position: relative;
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+}
+.change-Bg::after
+{
+    content: '';
+    clear: both;
+    display: table;
+}
+h3
+{
+    float: left;
+}
+.change-Bg > span
+{
+    position: absolute;
+    right: 75px;
+    top: 38px;
+    font-size: 10px;
+}
+.theme 
+{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+.theme p 
+{
+    margin: 0;
+    padding: 0;
+}
+.theme .selector
+{
+    background: var(--Very-dark-desaturated-blue2);
+    padding: 1px;
+    letter-spacing: 5px;
+    border-radius: 8px;
+    text-align: center;
+}
+.theme .nmbr
+{
+    letter-spacing: 4px;
+}
+.selector input[type="radio"]
+{
+    display: none;
+}
+label
+{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-top: 3px;
+    /* background: red; */
+}
+input[type="radio"]:nth-child(1):checked + label
+{
+    background: var(--Red);
+}
+input[type="radio"]:nth-child(3):checked + label
+{
+    background: var(--Orange);
+}
+input[type="radio"]:nth-child(5):checked + label
+{
+    background: var(--Pure-cyan);
+}
+
+.calc
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-gap: 6px;
+    font-size: 32px;
+    font-weight: 700;
+    background: var(--Very-dark-desaturated-blue2);
+    border-radius: 12px;
+    padding: 12px 19px;
+}
+ .txt
+{
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    border: none;
+    outline: none;
+    background: var(--Very-dark-desaturated-blue3);
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 8px;
+    color: hsl(0, 0%, 100%);
+}
+hr
+{
+    grid-column: span 4;
+    margin: 0;
+    padding: 0;
+    background: inherit;
+    visibility: hidden;
+}
+.calc .btn
+{
+    background: var(--Light-grayish-orange);
+    padding: 6px 12px;
+    margin: 2px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px var(--Grayish-orange);
+    color: var(--Very-dark-grayish-blue);
+    cursor: pointer;
+}
+.calc .btn:active
+{
+    transform: translateY(5px);
+    box-shadow: 0 1px var(--Grayish-orange);
+}
+.calc .reset, .calc .equal
+{
+    grid-column: span 2;
+    font-size: 14px;
+    padding: 17px;
+}
+.calc .equal
+{
+    background: var(--Red);
+    box-shadow:0 4px var(--Dark-red);
+    color: hsl(0, 0%, 100%);
+}
+.calc .del 
+{
+    font-size: 12px;
+    padding: 17px 0;
+    font-weight: 900;
+}
+.calc .reset, .calc .del
+{
+    background: var(--Desaturated-dark-blue1);
+    box-shadow:0 4px var(--Desaturated-dark-blue2);
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 768px)
+ {
+    .container
+    {
+        width: 415px;
+    }
+    .calc
+    {
+        grid-gap: 11px;
+    }
+}

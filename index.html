@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  </style>
+</head>
+<body id="bdy" class="bdy">
+
+    <div class="container">
+    <div class="change-Bg">
+      
+        <h3>calc</h3>
+        <span>THEME</span>
+        <div class="theme">
+      
+          
+          <p class="nmbr"><span>1 2 3</span></p>
+          <p class="selector">
+          
+          <input type="radio" name="rad" id="rad1">
+          <label for="rad1" onclick="myBtn1()"></label>
+          <input type="radio" name="rad" id="rad2">
+          <label for="rad2" onclick="myBtn2()"></label>
+          <input type="radio" name="rad" id="rad3">
+          <label for="rad3" onclick="myBtn3()"></label>
+          </p>
+        </div>
+      </div>
+      <form name="calc">
+      <input type="text" class="txt" name="txt" readonly placeholder="399,981">
+        <div class="calc">
+            <!-- <input type="text" class="txt" name="txt" readonly placeholder="123456"> -->
+            <hr>
+            <span class="btn" onclick="document.calc.txt.value += '7'">7</span>
+            <span class="btn" onclick="document.calc.txt.value += '8'">8</span>
+            <span class="btn" onclick="document.calc.txt.value += '9'">9</span>
+            <span class="btn del col" onclick="delBtn()">DEL</span>
+            <span class="btn" onclick="document.calc.txt.value += '4'">4</span>
+            <span class="btn" onclick="document.calc.txt.value += '5'">5</span>
+            <span class="btn" onclick="document.calc.txt.value += '6'">6</span>
+            <span class="btn" onclick="document.calc.txt.value += '+'">+</span>
+            <span class="btn" onclick="document.calc.txt.value += '1'">1</span>
+            <span class="btn" onclick="document.calc.txt.value += '2'">2</span>
+            <span class="btn" onclick="document.calc.txt.value += '3'">3</span>
+            <span class="btn" onclick="document.calc.txt.value += '-'">-</span>
+            <span class="btn" onclick="document.calc.txt.value += '.'">.</span>
+            <span class="btn" onclick="document.calc.txt.value += '0'">0</span>
+            <span class="btn" onclick="document.calc.txt.value += '/'">/</span>
+            <span class="btn" onclick="document.calc.txt.value += '*'">x</span>
+            <span class="btn reset col" onclick="document.calc.txt.value = ''">RESET</span>
+            <span class="btn equal" onclick="document.calc.txt.value=eval(document.calc.txt.value)">=</span>
+        </div>
+      </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
